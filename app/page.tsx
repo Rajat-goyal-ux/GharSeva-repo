@@ -721,13 +721,14 @@ export default function Home() {
       const profileResponse = await secureFetch("/api/vendors?mine=1", { cache: "no-store" }, token);
       const profileData = await profileResponse.json();
       if (!profileResponse.ok) throw new Error(profileData.error);
-      let profile = profileData.vendors?.[0] as Vendor | undefined;
-      if (!profile) {
+      const savedProfile = profileData.vendors?.[0] as Vendor | undefined;
+      if (!savedProfile) {
         setVendorProfile(null);
         setJobs([]);
         if (showMissing) setNotice("पहले vendor profile बनाएँ.");
         return;
       }
+      let profile: Vendor = savedProfile;
       if (profile.available) {
         const heartbeatResponse = await secureFetch("/api/vendors", {
           method: "PATCH",
