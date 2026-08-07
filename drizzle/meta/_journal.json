@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1786017415950,
+      "tag": "0000_majestic_ogun",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1786116967802,
+      "tag": "0001_robust_master_mold",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1786120031997,
+      "tag": "0002_cuddly_jackpot",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1786124299386,
+      "tag": "0003_clean_clint_barton",
+      "breakpoints": true
+    }
+  ]
+}
